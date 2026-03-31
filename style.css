@@ -589,7 +589,7 @@ footer { background: var(--nav-bg); padding: 70px var(--pad-x) 36px; }
   overflow-y: auto; flex: 1;
 }
 .team-modal-body p {
-  font-size: 0.9rem; font-weight: 300;
+  font-size: 1rem; font-weight: 300;
   line-height: 1.85; color: var(--text-light);
   margin-bottom: 16px;
 }
