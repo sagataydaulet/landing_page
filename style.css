@@ -580,6 +580,7 @@ footer { background: var(--nav-bg); padding: 70px var(--pad-x) 36px; }
   color: var(--gold-accent); margin-bottom: 10px;
 }
 .team-modal-name {
+  max-width: 58ch;
   font-size: 1.8rem; font-weight: 500;
   color: var(--text-light); line-height: 1.2;
 }
