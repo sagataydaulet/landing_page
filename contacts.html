@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="i18n-title" content="contacts.label">
+<title>Контакты — Bridge Invest Capital</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+.contacts-page {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 140px var(--pad-x) 80px;
+}
+
+.contacts-inner-wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+/* ── Left: headline ── */
+.contacts-left-col {
+  opacity: 0;
+  animation: fadeUp .7s .1s ease forwards;
+}
+
+.contacts-overline {
+  font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 24px;
+  display: flex; align-items: center; gap: 14px;
+}
+.contacts-overline::before {
+  content: ''; display: block;
+  width: 32px; height: 1px; background: var(--gold);
+}
+
+.contacts-title {
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  font-weight: 400; line-height: 1.12;
+  color: var(--text-dark); letter-spacing: -0.01em;
+  margin-bottom: 28px;
+}
+.contacts-title .gold { color: var(--gold); }
+
+.contacts-desc {
+  font-size: 1rem; font-weight: 400; line-height: 1.85;
+  color: var(--text-mid); max-width: 600px;
+}
+
+/* ── Right: contact blocks ── */
+.contacts-right-col {
+  display: flex; flex-direction: column; gap: 0;
+  opacity: 0;
+  animation: fadeUp .7s .25s ease forwards;
+}
+
+.contact-block {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.contact-block:first-child { padding-top: 0; }
+.contact-block:last-child  { border-bottom: none; }
+
+.contact-block-label {
+  font-size: 0.58rem; font-weight: 700;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 10px;
+}
+
+.contact-block-value {
+  font-size: 1.05rem; font-weight: 400;
+  line-height: 1.65; color: var(--text-dark);
+}
+.contact-block-value a {
+  color: inherit; text-decoration: none; transition: color .2s;
+}
+.contact-block-value a:hover { color: var(--gold); }
+
+.contact-block-sub {
+  display: block; margin-top: 2px;
+  font-size: 0.85rem; color: var(--text-mid);
+}
+
+/* ── LinkedIn footnote ── */
+.contacts-linkedin-row {
+  margin-top: 40px; padding-top: 32px;  
+  display: flex; align-items: center; gap: 14px;
+  opacity: 0;
+  animation: fadeUp .7s .4s ease forwards;
+}
+.contacts-linkedin-label {
+  font-size: 0.7rem; font-weight: 300;
+  color: var(--text-mid); letter-spacing: 0.05em;
+}
+.contacts-linkedin-link {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 0.78rem; font-weight: 500;
+  color: var(--text-dark); text-decoration: none;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 1px;
+  transition: color .2s, border-color .2s;
+}
+.contacts-linkedin-link:hover { color: var(--gold); border-color: var(--gold); }
+.contacts-linkedin-link svg { width: 13px; height: 13px; fill: currentColor; flex-shrink: 0; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (max-width: 900px) {
+  .contacts-inner-wrap { grid-template-columns: 1fr; gap: 56px; }
+  .contacts-main { padding-top: 120px; }
+}
+@media (max-width: 768px) {
+  .contacts-main { padding: 110px 20px 60px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="nav-logo-wrap" href="index.html">
+    <div class="nav-logo-icon"><img src="assets/Logo.png" alt="BIC"></div>
+    <div class="nav-logo-text"><span>Bridge</span><span>Invest</span><span>Capital</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a id="nl-home"     href="index.html"    data-i18n="nav.home">Главная</a></li>
+    <li><a id="nl-services" href="services.html" data-i18n="nav.services">Услуги</a></li>
+    <li><a id="nl-team"     href="team.html"     data-i18n="nav.team">Наша команда</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-dropdown" id="langDropdown">
+      <button class="lang-dropdown-btn" onclick="toggleLangDropdown()">
+        <span id="langLabel">&#x1F1F7;&#x1F1FA; RU</span>
+        <svg class="lang-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="lang-dropdown-menu">
+        <button class="lang-option" data-lang="ru" onclick="setLang('ru')"><span class="lang-flag">&#x1F1F7;&#x1F1FA;</span><span class="lang-name">Русский</span><span class="lang-code">RU</span></button>
+        <button class="lang-option" data-lang="en" onclick="setLang('en')"><span class="lang-flag">&#x1F1EC;&#x1F1E7;</span><span class="lang-name">English</span><span class="lang-code">EN</span></button>
+        <button class="lang-option" data-lang="kz" onclick="setLang('kz')"><span class="lang-flag">&#x1F1F0;&#x1F1FF;</span><span class="lang-name">Қазақша</span><span class="lang-code">ҚЗ</span></button>
+        <button class="lang-option" data-lang="zh" onclick="setLang('zh')"><span class="lang-flag">&#x1F1E8;&#x1F1F3;</span><span class="lang-name">中文</span><span class="lang-code">ZH</span></button>
+      </div>
+    </div>
+    <a class="nav-cta" href="contacts.html" data-i18n="nav.cta">Обсудить проект</a>
+    <button class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ══ MOBILE MENU ══ -->
+<div class="mobile-menu" id="mMenu">
+  <a href="index.html"    onclick="toggleMenu()" data-i18n="nav.home">Главная</a>
+  <a href="services.html" onclick="toggleMenu()" data-i18n="nav.services">Услуги</a>
+  <a href="team.html"     onclick="toggleMenu()" data-i18n="nav.team">Наша команда</a>
+  <a href="contacts.html" onclick="toggleMenu()" data-i18n="nav.cta">Обсудить проект</a>
+  <a href="contacts.html" class="mob-cta" onclick="toggleMenu()" data-i18n="nav.cta">Обсудить проект</a>
+  <div class="mob-lang">
+    <button class="mob-lang-btn" data-lang="ru" onclick="setLang('ru');toggleMenu()">&#x1F1F7;&#x1F1FA; RU</button>
+    <button class="mob-lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()">&#x1F1EC;&#x1F1E7; EN</button>
+    <button class="mob-lang-btn" data-lang="kz" onclick="setLang('kz');toggleMenu()">&#x1F1F0;&#x1F1FF; ҚЗ</button>
+    <button class="mob-lang-btn" data-lang="zh" onclick="setLang('zh');toggleMenu()">&#x1F1E8;&#x1F1F3; 中文</button>
+  </div>
+</div>
+
+<!-- ══ PAGE ══ -->
+<div class="contacts-page">
+
+  <main class="contacts-main">
+    <div class="contacts-inner-wrap">
+
+      <!-- LEFT: headline + description -->
+      <div class="contacts-left-col">
+        <div class="section-label" data-i18n="contacts.label">Контакты</div>
+        <h1 class="contacts-title">
+          <span data-i18n="contacts.h1.gold">Свяжитесь</span>
+          <span class="gold" data-i18n="contacts.h1.rest"> с нами</span>
+        </h1>
+        <p class="contacts-desc" data-i18n="contacts.subtitle">
+          Готовы обсудить ваш проект и предложить оптимальный формат сопровождения. Работаем с проектами на любом этапе.
+        </p>
+      </div>
+
+      <!-- RIGHT: contact details -->
+      <div class="contacts-right-col">
+
+        <div class="contact-block">
+          <div class="contact-block-label" data-i18n="contacts.phone.label">Телефон</div>
+          <div class="contact-block-value">
+            <a href="tel:+77172571701">+7 7172 57 17 01</a>
+          </div>
+        </div>
+
+        <div class="contact-block">
+          <div class="contact-block-label" data-i18n="contacts.email.label">Электронная почта</div>
+          <div class="contact-block-value">
+            <a href="mailto:info@bridgeinvest.kz">info@bridgeinvest.kz</a>
+          </div>
+        </div>
+
+        <div class="contact-block">
+          <div class="contact-block-label" data-i18n="contacts.address.label">Адрес</div>
+          <div class="contact-block-value">
+            <span data-i18n="contacts.address.line1">Казахстан, г. Астана</span>
+            <span class="contact-block-sub" data-i18n="contacts.address.line2">ул. Достык, 20, 14 этаж</span>
+          </div>
+        </div>
+
+        <div class="contacts-linkedin-row">
+          <span class="contacts-linkedin-label" data-i18n="contacts.linkedin.label">LinkedIn</span>
+          <a class="contacts-linkedin-link"
+             href="https://www.linkedin.com/company/bridge-invest-capital/"
+             target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Bridge Invest Capital
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <a class="footer-logo-wrap" href="index.html">
+            <div class="footer-logo-icon"><img src="assets/Logo.png" alt="BIC"></div>
+            <div class="footer-logo-text"><span>Bridge</span><span>Invest</span><span>Capital</span></div>
+          </a>
+        </div>
+        <div class="footer-right">
+          <div class="footer-nav">
+            <div class="footer-col-label" data-i18n="footer.nav.label">Навигация</div>
+            <ul>
+              <li><a href="index.html"    data-i18n="nav.home">Главная</a></li>
+              <li><a href="services.html" data-i18n="nav.services">Услуги</a></li>
+              <li><a href="team.html"     data-i18n="nav.team">Наша команда</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <div class="footer-col-label" data-i18n="footer.contacts.label">Контакты</div>
+            <p>+7 7172 57 17 01<br><a href="mailto:info@bridgeinvest.kz">info@bridgeinvest.kz</a></p>
+            <div class="footer-col-label addr-label" data-i18n="footer.address.label">Адрес</div>
+            <p>Казахстан, г. Астана,<br>ул. Достык, 20, 14 этаж</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2026 Bridge Invest Capital. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

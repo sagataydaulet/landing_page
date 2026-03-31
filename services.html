@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="i18n-title" content="nav.services">
+<title>Услуги — Bridge Invest Capital</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="nav-logo-wrap" href="index.html">
+    <div class="nav-logo-icon"><img src="assets/Logo.png" alt="BIC"></div>
+    <div class="nav-logo-text"><span>Bridge</span><span>Invest</span><span>Capital</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a id="nl-home"     href="index.html"    data-i18n="nav.home">Главная</a></li>
+    <li><a id="nl-services" href="services.html" data-i18n="nav.services">Услуги</a></li>
+    <li><a id="nl-team"     href="team.html"     data-i18n="nav.team">Наша команда</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-dropdown" id="langDropdown">
+      <button class="lang-dropdown-btn" onclick="toggleLangDropdown()">
+        <span id="langLabel">&#x1F1F7;&#x1F1FA; RU</span>
+        <svg class="lang-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="lang-dropdown-menu">
+        <button class="lang-option" data-lang="ru" onclick="setLang('ru')"><span class="lang-flag">&#x1F1F7;&#x1F1FA;</span><span class="lang-name">Русский</span><span class="lang-code">RU</span></button>
+        <button class="lang-option" data-lang="en" onclick="setLang('en')"><span class="lang-flag">&#x1F1EC;&#x1F1E7;</span><span class="lang-name">English</span><span class="lang-code">EN</span></button>
+        <button class="lang-option" data-lang="kz" onclick="setLang('kz')"><span class="lang-flag">&#x1F1F0;&#x1F1FF;</span><span class="lang-name">Қазақша</span><span class="lang-code">ҚЗ</span></button>
+        <button class="lang-option" data-lang="zh" onclick="setLang('zh')"><span class="lang-flag">&#x1F1E8;&#x1F1F3;</span><span class="lang-name">中文</span><span class="lang-code">ZH</span></button>
+      </div>
+    </div>
+    <a class="nav-cta" href="contacts.html" data-i18n="nav.cta">Обсудить проект</a>
+    <button class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ══ MOBILE MENU ══ -->
+<div class="mobile-menu" id="mMenu">
+  <a href="index.html"    onclick="toggleMenu()" data-i18n="nav.home">Главная</a>
+  <a href="services.html" onclick="toggleMenu()" data-i18n="nav.services">Услуги</a>
+  <a href="team.html"     onclick="toggleMenu()" data-i18n="nav.team">Наша команда</a>
+  <a href="contacts.html" onclick="toggleMenu()" data-i18n="nav.cta">Обсудить проект</a>
+  <a href="contacts.html" class="mob-cta" onclick="toggleMenu()" data-i18n="nav.cta">Обсудить проект</a>
+  <div class="mob-lang">
+    <button class="mob-lang-btn" data-lang="ru" onclick="setLang('ru');toggleMenu()">&#x1F1F7;&#x1F1FA; RU</button>
+    <button class="mob-lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()">&#x1F1EC;&#x1F1E7; EN</button>
+    <button class="mob-lang-btn" data-lang="kz" onclick="setLang('kz');toggleMenu()">&#x1F1F0;&#x1F1FF; ҚЗ</button>
+    <button class="mob-lang-btn" data-lang="zh" onclick="setLang('zh');toggleMenu()">&#x1F1E8;&#x1F1F3; 中文</button>
+  </div>
+</div>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label" data-i18n="services.label">Услуги</div>
+    <p class="subtitle" data-i18n="services.subtitle">Пять этапов комплексного инвестиционного сопровождения.</p>
+  </div>
+</section>
+
+<!-- ══ STEPS ══ -->
+<section class="services-body">
+  <div class="services-inner">
+
+    <div class="step reveal">
+      <div class="step-num">01</div>
+      <div class="step-content">
+        <h3 data-i18n="services.s1.title">Идея проекта</h3>
+        <p class="step-sub" data-i18n="services.s1.sub">Оцениваем реализуемость до того, как вы вложите капитал или ресурсы.</p>
+        <ul class="step-list">
+          <li data-i18n="services.s1.li1">Экспресс-оценка реализуемости проекта</li>
+          <li data-i18n="services.s1.li2">Выявление рисков и ограничений</li>
+          <li data-i18n="services.s1.li3">Зондирование поддержки со стороны госорганов</li>
+          <li data-i18n="services.s1.li4">Стратегическое позиционирование и анализ рынка</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-num">02</div>
+      <div class="step-content">
+        <h3 data-i18n="services.s2.title">Структурирование входа</h3>
+        <p class="step-sub" data-i18n="services.s2.sub">Правовая и операционная основа для запуска бизнеса в Казахстане.</p>
+        <ul class="step-list">
+          <li data-i18n="services.s2.li1">Регистрация юридического лица</li>
+          <li data-i18n="services.s2.li2">Разработка стратегии выхода на рынок</li>
+          <li data-i18n="services.s2.li3">Получение лицензий и разрешений</li>
+          <li data-i18n="services.s2.li4">Операционный запуск</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-num">03</div>
+      <div class="step-content">
+        <h3 data-i18n="services.s3.title">Локализация</h3>
+        <p class="step-sub" data-i18n="services.s3.sub">Подбор оптимального региона, площадки и доступ к инфраструктуре.</p>
+        <ul class="step-list">
+          <li data-i18n="services.s3.li1">Региональный и площадочный выбор</li>
+          <li data-i18n="services.s3.li2">Аудит технических условий</li>
+          <li data-i18n="services.s3.li3">Получение земельного участка</li>
+          <li data-i18n="services.s3.li4">Подключение к инженерной инфраструктуре</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-num">04</div>
+      <div class="step-content">
+        <h3 data-i18n="services.s4.title">Стимулирование</h3>
+        <p class="step-sub" data-i18n="services.s4.sub">Интеграция в государственные программы поддержки и получение преференций.</p>
+        <ul class="step-list">
+          <li data-i18n="services.s4.li1">Заключение инвестиционного контракта (льготы по КПН, налогу на имущество, земельному налогу)</li>
+          <li data-i18n="services.s4.li2">Таможенные льготы на импорт оборудования</li>
+          <li data-i18n="services.s4.li3">Натурные гранты: земля и инфраструктура</li>
+          <li data-i18n="services.s4.li4">Участие в национальных программах развития</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step reveal">
+      <div class="step-num">05</div>
+      <div class="step-content">
+        <h3 data-i18n="services.s5.title">Эксплуатация и мониторинг</h3>
+        <p class="step-sub" data-i18n="services.s5.sub">Защита инвестиций и сопровождение на операционном этапе.</p>
+        <ul class="step-list">
+          <li data-i18n="services.s5.li1">Контроль исполнения контрактных обязательств</li>
+          <li data-i18n="services.s5.li2">Текущее GR-консультирование</li>
+          <li data-i18n="services.s5.li3">Выявление и снижение регуляторных рисков</li>
+          <li data-i18n="services.s5.li4">Взаимодействие с госорганами и местным сообществом</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a class="footer-logo-wrap" href="index.html">
+          <div class="footer-logo-icon"><img src="assets/Logo.png" alt="BIC"></div>
+          <div class="footer-logo-text"><span>Bridge</span><span>Invest</span><span>Capital</span></div>
+        </a>
+      </div>
+      <div class="footer-right">
+        <div class="footer-nav">
+          <div class="footer-col-label" data-i18n="footer.nav.label">Навигация</div>
+          <ul>
+            <li><a href="index.html"    data-i18n="nav.home">Главная</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Услуги</a></li>
+            <li><a href="team.html"     data-i18n="nav.team">Наша команда</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-col-label" data-i18n="footer.contacts.label">Контакты</div>
+          <p>+7 7172 57 17 01<br><a href="mailto:info@bridgeinvest.kz">info@bridgeinvest.kz</a></p>
+          <div class="footer-col-label addr-label" data-i18n="footer.address.label">Адрес</div>
+          <p>Казахстан, г. Астана,<br>ул. Достык, 20, 14 этаж</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copyright">© 2026 Bridge Invest Capital. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

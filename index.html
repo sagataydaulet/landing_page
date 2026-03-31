@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="i18n-title" content="nav.home">
+<title>Главная — Bridge Invest Capital</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="nav-logo-wrap" href="index.html">
+    <div class="nav-logo-icon"><img src="assets/Logo.png" alt="BIC"></div>
+    <div class="nav-logo-text"><span>Bridge</span><span>Invest</span><span>Capital</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a id="nl-home"     href="index.html"    data-i18n="nav.home">Главная</a></li>
+    <li><a id="nl-services" href="services.html" data-i18n="nav.services">Услуги</a></li>
+    <li><a id="nl-team"     href="team.html"     data-i18n="nav.team">Наша команда</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-dropdown" id="langDropdown">
+      <button class="lang-dropdown-btn" onclick="toggleLangDropdown()">
+        <span id="langLabel">&#x1F1F7;&#x1F1FA; RU</span>
+        <svg class="lang-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="lang-dropdown-menu">
+        <button class="lang-option" data-lang="ru" onclick="setLang('ru')"><span class="lang-flag">&#x1F1F7;&#x1F1FA;</span><span class="lang-name">Русский</span><span class="lang-code">RU</span></button>
+        <button class="lang-option" data-lang="en" onclick="setLang('en')"><span class="lang-flag">&#x1F1EC;&#x1F1E7;</span><span class="lang-name">English</span><span class="lang-code">EN</span></button>
+        <button class="lang-option" data-lang="kz" onclick="setLang('kz')"><span class="lang-flag">&#x1F1F0;&#x1F1FF;</span><span class="lang-name">Қазақша</span><span class="lang-code">ҚЗ</span></button>
+        <button class="lang-option" data-lang="zh" onclick="setLang('zh')"><span class="lang-flag">&#x1F1E8;&#x1F1F3;</span><span class="lang-name">中文</span><span class="lang-code">ZH</span></button>
+      </div>
+    </div>
+    <a class="nav-cta" href="contacts.html" data-i18n="nav.cta">Обсудить проект</a>
+    <button class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ══ MOBILE MENU ══ -->
+<div class="mobile-menu" id="mMenu">
+  <a href="index.html"    onclick="toggleMenu()" data-i18n="nav.home">Главная</a>
+  <a href="services.html" onclick="toggleMenu()" data-i18n="nav.services">Услуги</a>
+  <a href="team.html"     onclick="toggleMenu()" data-i18n="nav.team">Наша команда</a>
+  <a href="contacts.html" onclick="toggleMenu()" data-i18n="nav.cta">Обсудить проект</a>
+  <a href="contacts.html" class="mob-cta" onclick="toggleMenu()" data-i18n="nav.cta">Обсудить проект</a>
+  <div class="mob-lang">
+    <button class="mob-lang-btn" data-lang="ru" onclick="setLang('ru');toggleMenu()">&#x1F1F7;&#x1F1FA; RU</button>
+    <button class="mob-lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()">&#x1F1EC;&#x1F1E7; EN</button>
+    <button class="mob-lang-btn" data-lang="kz" onclick="setLang('kz');toggleMenu()">&#x1F1F0;&#x1F1FF; ҚЗ</button>
+    <button class="mob-lang-btn" data-lang="zh" onclick="setLang('zh');toggleMenu()">&#x1F1E8;&#x1F1F3; 中文</button>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1>
+        <span class="gold" data-i18n="home.hero.title.gold">Надежный мост</span><br>
+        <span data-i18n="home.hero.title.rest">к инвестициям в Казахстане.</span>
+      </h1>
+      <p class="hero-desc">
+        <strong>Bridge Invest Capital</strong>
+        <span data-i18n="home.hero.desc"> — профессиональный инвестиционный оператор. Мы сопровождаем проект от первоначальной идеи до работающего бизнеса — преодолевая административные, регуляторные и институциональные барьеры на каждом этапе.</span>
+      </p>
+      <div class="hero-btns">
+        <a class="btn-gold" href="contacts.html" data-i18n="home.hero.btn.discuss">Обсудить проект</a>
+        <a class="btn-dark" href="services.html" data-i18n="home.hero.btn.services">Наши услуги</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY KAZAKHSTAN ══ -->
+<section class="why-section">
+  <div class="why-inner">
+    <div class="section-label" data-i18n="home.why.label">Почему Казахстан</div>
+    <div class="why-grids">
+      <div class="reveal">
+        <div class="why-h2" data-i18n="home.why.h2.1">Казахстан — один из самых активных инвестиционных рынков Центральной Азии.</div>
+        <p class="why-text" data-i18n="home.why.text.1">Тысячи проектов в национальных инвестиционных пулах, 16 специальных экономических зон, институты развития с капиталом в десятки триллионов тенге. Государство системно создаёт условия для привлечения капитала — фискальные преференции, инфраструктурные площадки, механизмы соинвестирования.</p>
+      </div>
+      <div class="reveal">
+        <div class="why-h2" data-i18n="home.why.h2.2">Возможности есть. Сложность — в том, чтобы ими воспользоваться.</div>
+        <p class="why-text" data-i18n="home.why.text.2">Инвесторы регулярно сталкиваются с барьерами, которые сложно преодолеть без опыта работы внутри системы: административные процедуры, земельные вопросы, интеграция в госпрограммы, неформальная рыночная динамика. Bridge Invest Capital создана именно для того, чтобы закрыть этот разрыв.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ APPROACH ══ -->
+<section class="approach-section">
+  <div class="approach-inner">
+    <div class="approach-header reveal">
+      <div class="section-label" data-i18n="home.approach.label">Наш подход</div>
+      <h2 data-i18n="home.approach.h2">Комплексное сопровождение на каждом этапе</h2>
+    </div>
+    <div class="cards-grid">
+      <a class="service-card reveal" href="services.html">
+        <div class="card-num">01</div>
+        <h4 data-i18n="home.card1.title">Комплексное сопровождение</h4>
+        <p data-i18n="home.card1.text">Закрываем весь цикл проекта: от оценки идеи до операционного запуска и постинвестиционного мониторинга. Один партнёр на всех этапах.</p>
+      </a>
+      <a class="service-card reveal" href="services.html">
+        <div class="card-num">02</div>
+        <h4 data-i18n="home.card2.title">Региональная экспертиза</h4>
+        <p data-i18n="home.card2.text">Глубокое понимание казахстанской деловой среды, регуляторики и местной специфики — в каждом регионе страны.</p>
+      </a>
+      <a class="service-card reveal" href="services.html">
+        <div class="card-num">03</div>
+        <h4 data-i18n="home.card3.title">GR-сопровождение</h4>
+        <p data-i18n="home.card3.text">Эффективное взаимодействие с государственными органами, содействие в получении преференций, лицензий и участии в госпрограммах.</p>
+      </a>
+      <a class="service-card reveal" href="services.html">
+        <div class="card-num">04</div>
+        <h4 data-i18n="home.card4.title">Защита интересов инвестора</h4>
+        <p data-i18n="home.card4.text">Сопровождение на постинвестиционном этапе: контроль обязательств, регуляторные риски, текущие институциональные вопросы.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a class="footer-logo-wrap" href="index.html">
+          <div class="footer-logo-icon"><img src="assets/Logo.png" alt="BIC"></div>
+          <div class="footer-logo-text"><span>Bridge</span><span>Invest</span><span>Capital</span></div>
+        </a>
+      </div>
+      <div class="footer-right">
+        <div class="footer-nav">
+          <div class="footer-col-label" data-i18n="footer.nav.label">Навигация</div>
+          <ul>
+            <li><a href="index.html"    data-i18n="nav.home">Главная</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Услуги</a></li>
+            <li><a href="team.html"     data-i18n="nav.team">Наша команда</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-col-label" data-i18n="footer.contacts.label">Контакты</div>
+          <p>+7 7172 57 17 01<br><a href="mailto:info@bridgeinvest.kz">info@bridgeinvest.kz</a></p>
+          <div class="footer-col-label addr-label" data-i18n="footer.address.label">Адрес</div>
+          <p>Казахстан, г. Астана,<br>ул. Достык, 20, 14 этаж</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copyright">© 2026 Bridge Invest Capital. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="i18n-title" content="nav.team">
+<title>Наша команда — Bridge Invest Capital</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="nav-logo-wrap" href="index.html">
+    <div class="nav-logo-icon"><img src="assets/Logo.png" alt="BIC"></div>
+    <div class="nav-logo-text"><span>Bridge</span><span>Invest</span><span>Capital</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a id="nl-home"     href="index.html"    data-i18n="nav.home">Главная</a></li>
+    <li><a id="nl-services" href="services.html" data-i18n="nav.services">Услуги</a></li>
+    <li><a id="nl-team"     href="team.html"     data-i18n="nav.team">Наша команда</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-dropdown" id="langDropdown">
+      <button class="lang-dropdown-btn" onclick="toggleLangDropdown()">
+        <span id="langLabel">&#x1F1F7;&#x1F1FA; RU</span>
+        <svg class="lang-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="lang-dropdown-menu">
+        <button class="lang-option" data-lang="ru" onclick="setLang('ru')"><span class="lang-flag">&#x1F1F7;&#x1F1FA;</span><span class="lang-name">Русский</span><span class="lang-code">RU</span></button>
+        <button class="lang-option" data-lang="en" onclick="setLang('en')"><span class="lang-flag">&#x1F1EC;&#x1F1E7;</span><span class="lang-name">English</span><span class="lang-code">EN</span></button>
+        <button class="lang-option" data-lang="kz" onclick="setLang('kz')"><span class="lang-flag">&#x1F1F0;&#x1F1FF;</span><span class="lang-name">Қазақша</span><span class="lang-code">ҚЗ</span></button>
+        <button class="lang-option" data-lang="zh" onclick="setLang('zh')"><span class="lang-flag">&#x1F1E8;&#x1F1F3;</span><span class="lang-name">中文</span><span class="lang-code">ZH</span></button>
+      </div>
+    </div>
+    <a class="nav-cta" href="contacts.html" data-i18n="nav.cta">Обсудить проект</a>
+    <button class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ══ MOBILE MENU ══ -->
+<div class="mobile-menu" id="mMenu">
+  <a href="index.html"    onclick="toggleMenu()" data-i18n="nav.home">Главная</a>
+  <a href="services.html" onclick="toggleMenu()" data-i18n="nav.services">Услуги</a>
+  <a href="team.html"     onclick="toggleMenu()" data-i18n="nav.team">Наша команда</a>
+  <a href="contacts.html" onclick="toggleMenu()" data-i18n="nav.cta">Обсудить проект</a>
+  <a href="contacts.html" class="mob-cta" onclick="toggleMenu()" data-i18n="nav.cta">Обсудить проект</a>
+  <div class="mob-lang">
+    <button class="mob-lang-btn" data-lang="ru" onclick="setLang('ru');toggleMenu()">&#x1F1F7;&#x1F1FA; RU</button>
+    <button class="mob-lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()">&#x1F1EC;&#x1F1E7; EN</button>
+    <button class="mob-lang-btn" data-lang="kz" onclick="setLang('kz');toggleMenu()">&#x1F1F0;&#x1F1FF; ҚЗ</button>
+    <button class="mob-lang-btn" data-lang="zh" onclick="setLang('zh');toggleMenu()">&#x1F1E8;&#x1F1F3; 中文</button>
+  </div>
+</div>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label" data-i18n="team.label">Наша команда</div>
+  </div>
+</section>
+
+<!-- ══ TEAM GRID ══ -->
+<section class="team-body">
+  <div class="team-inner">
+    <div class="team-grid">
+
+      <div class="team-card reveal" onclick="openModal('m1')">
+        <div class="team-photo">
+          <img src="assets/Aidarov.png" alt="Айдаров Алмас"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="avatar-initials" style="display:none;">АА</span>
+        </div>
+        <div class="team-info">
+          <h3 data-i18n="team.m1.name">Айдаров Алмас</h3>
+          <div class="team-divider"></div>
+          <div class="role" data-i18n="team.m1.role">Председатель наблюдательного совета</div>
+          <div class="team-hint">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span data-i18n="team.hint">Подробнее</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card reveal" onclick="openModal('m2')">
+        <div class="team-photo">
+          <img src="assets/Sagatay.png" alt="Сагатай Даулет"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="avatar-initials" style="display:none;">СД</span>
+        </div>
+        <div class="team-info">
+          <h3 data-i18n="team.m2.name">Сагатай Даулет</h3>
+          <div class="team-divider"></div>
+          <div class="role" data-i18n="team.m2.role">Генеральный директор</div>
+          <div class="team-hint">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span data-i18n="team.hint">Подробнее</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card reveal" onclick="openModal('m3')">
+        <div class="team-photo">
+          <img src="assets/Spandiyar.png" alt="Спандияр Нурсултан"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="avatar-initials" style="display:none;">СН</span>
+        </div>
+        <div class="team-info">
+          <h3 data-i18n="team.m3.name">Спандияр Нурсултан</h3>
+          <div class="team-divider"></div>
+          <div class="role" data-i18n="team.m3.role">Директор по развитию бизнеса</div>
+          <div class="team-hint">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span data-i18n="team.hint">Подробнее</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-card reveal" onclick="openModal('m4')">
+        <div class="team-photo">
+          <img src="assets/Serikov.png" alt="Сериков Диас"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="avatar-initials" style="display:none;">СД</span>
+        </div>
+        <div class="team-info">
+          <h3 data-i18n="team.m4.name">Сериков Диас</h3>
+          <div class="team-divider"></div>
+          <div class="role" data-i18n="team.m4.role">Директор по связи с государством</div>
+          <div class="team-hint">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span data-i18n="team.hint">Подробнее</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ TEAM MODAL ══ -->
+<div class="team-modal-overlay" id="teamModal" onclick="closeModalOnOverlay(event)">
+  <div class="team-modal" id="teamModalBox">
+    <button class="team-modal-close" onclick="closeModal()">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="team-modal-top">
+      <div class="team-modal-photo" id="modalPhoto"></div>
+      <div class="team-modal-header">
+        <div class="team-modal-role" id="modalRole"></div>
+        <div class="team-modal-name" id="modalName"></div>
+      </div>
+    </div>
+    <div class="team-modal-body" id="modalBio"></div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a class="footer-logo-wrap" href="index.html">
+          <div class="footer-logo-icon"><img src="assets/Logo.png" alt="BIC"></div>
+          <div class="footer-logo-text"><span>Bridge</span><span>Invest</span><span>Capital</span></div>
+        </a>
+      </div>
+      <div class="footer-right">
+        <div class="footer-nav">
+          <div class="footer-col-label" data-i18n="footer.nav.label">Навигация</div>
+          <ul>
+            <li><a href="index.html"    data-i18n="nav.home">Главная</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Услуги</a></li>
+            <li><a href="team.html"     data-i18n="nav.team">Наша команда</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-col-label" data-i18n="footer.contacts.label">Контакты</div>
+          <p>+7 7172 57 17 01<br><a href="mailto:info@bridgeinvest.kz">info@bridgeinvest.kz</a></p>
+          <div class="footer-col-label addr-label" data-i18n="footer.address.label">Адрес</div>
+          <p>Казахстан, г. Астана,<br>ул. Достык, 20, 14 этаж</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copyright">© 2026 Bridge Invest Capital. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+<script>
+/* ══════════════════════════════════════════════════════
+   TEAM MODAL DATA
+   Заполните поля bio на нужных языках.
+   Поддерживается массив строк — каждая строка = абзац.
+══════════════════════════════════════════════════════ */
+const teamData = {
+  m1: {
+    photo: 'assets/Aidarov.png', initials: 'АА',
+    bio: {
+      ru: [
+        'Более 20 лет в государственном управлении и инвестиционной сфере. Занимал должности заместителя Министра иностранных дел РК, заместителя акима Карагандинской области по вопросам промышленности и инвестиций, управляющего директора в группе Самрук-Казына. Руководил привлечением прямых иностранных инвестиций в период работы в Kazakh Invest (ранее Kaznex Invest).',
+      ],
+      en: [
+        'Over 20 years in public administration and investment. Served as Deputy Minister of Foreign Affairs of Kazakhstan, Deputy Akim of Karaganda Region for Industry and Investment, and Managing Director at Samruk-Kazyna Group. Led foreign direct investment attraction at Kazakh Invest (former Kaznex Invest).',
+      ],
+      kz: [
+        '20 жылдан астам мемлекеттік басқару мен инвестиция саласындағы тәжірибе. ҚР Сыртқы істер министрінің орынбасары, Қарағанды облысы әкімінің өнеркәсіп және инвестициялар жөніндегі орынбасары, Самұрық-Қазына тобының басқарушы директоры қызметтерін атқарды. Kazakh Invest (Kaznex Invest) ұйымдарында тікелей шетелдік инвестицияларды тарту жұмысын басқарды.',
+      ],
+      zh: [
+        '在政府管理和投资领域拥有逾20年经验。曾任哈萨克斯坦外交部副部长、卡拉干达州工业与投资副州长及萨姆鲁克-卡泽纳集团董事总经理。在Kazakh Invest和(Kaznex Invest)任职期间主导外商直接投资引进工作',
+      ]
+    }
+  },
+  m2: {
+    photo: 'assets/Sagatay.png', initials: 'СД',
+    bio: {
+      ru: [
+        'Более 10 лет в области инвестиций и стратегического консалтинга. Структурировал и закрыл инвестиционные сделки на сумму более $60 млн в различных секторах экономики. Руководил разработкой стратегических документов государственной политики; член Проектного офиса по региональному развитию при Правительстве РК. Советник по стратегии и инвестициям в консорциуме крупнейших нефтегазовых операторов (TCO, NCOC, KPO). Ранее — МФЦА, Deloitte, University of Exeter.',        
+      ],
+      en: [
+        'Over 10 years in investment and strategic consulting. Structured and closed investment deals totalling more than $60M across multiple sectors. Led the development of government policy documents; member of the Regional Development Project Office under the Government of Kazakhstan. Strategy and investment advisor to a consortium of major oil and gas operators (TCO, NCOC, KPO). Previously — AIFC, Deloitte, University of Exeter.',
+      ],
+      kz: [
+        '10 жылдан астам инвестиция және стратегиялық консалтинг саласындағы тәжірибе. Экономиканың түрлі секторларында жалпы сомасы $60 млн-нан асатын инвестициялық мәмілелерді құрылымдап, жабылуын қамтамасыз етті. Мемлекеттік саясаттың стратегиялық құжаттарын әзірлеуді басқарды; ҚР Үкіметі жанындағы Өңірлік даму жобалық кеңсесінің мүшесі. ТШО, НКОК, КПО сияқты ірі мұнай-газ операторлары консорциумының стратегия және инвестициялар бойынша кеңесшісі. Бұрын — ҚМФО, Deloitte, University of Exeter',
+      ],
+      zh: [
+        '在投资与战略咨询领域拥有逾10年经验。在多个经济领域完成总额超6000万美元的投资交易结构设计与交割。主导国家政策战略文件的制定；哈萨克斯坦政府区域发展项目办公室成员。担任主要油气运营商联合体（TCO、NCOC、KPO）战略与投资顾问。曾就职于阿斯塔纳国际金融中心、德勤。英国埃克塞特大学一等荣誉学士。',
+      ]
+    }
+  },
+  m3: {
+    photo: 'assets/Spandiyar.png', initials: 'СН',
+    bio: {
+      ru: [
+        'Более 10 лет в государственных структурах: Министерство энергетики РК, Администрация Президента РК, аппарат акима Алматинской области. С 2023 года — директор Steppe Development Fund. Глубокая экспертиза в энергетическом секторе и взаимодействии с государственными органами на республиканском и региональном уровне.',        
+      ],
+      en: [
+        'Over 10 years in government: Ministry of Energy of Kazakhstan, Administration of the President of Kazakhstan, Office of the Akim of Almaty Region. Director of Steppe Development Fund since 2023. Deep expertise in the energy sector and engagement with government bodies at the national and regional level.',
+      ],
+      kz: [
+        '10 жылдан астам мемлекеттік құрылымдардағы тәжірибе: ҚР Энергетика министрлігі, ҚР Президентінің Әкімшілігі, Алматы облысы әкімінің аппараты. 2023 жылдан бастап Steppe Development Fund директоры. Энергетика секторы мен мемлекеттік органдармен республикалық және өңірлік деңгейде өзара іс-қимыл жасаудағы терең сараптама.',
+      ],
+      zh: [
+        '在政府机构拥有逾10年从业经历：哈萨克斯坦能源部、哈萨克斯坦总统行政管理局、阿拉木图州州长办公室。自2023年起担任Steppe Development Fund总监。在能源领域及与共和国级和地区级政府机构的互动方面具有深厚专业积累。',
+      ]
+    }
+  },
+  m4: {
+    photo: 'assets/Serikov.png', initials: 'СД',
+    bio: {
+      ru: [
+        'Более 12 лет в сфере промышленной политики и мер государственной поддержки бизнеса. Работал в QazIndustry, где формировал промышленную политику РК и сопровождал получение мер господдержки. Руководил управлениями предпринимательства и индустриально-инновационного развития в Алматинской области и области Жетысу.',        
+      ],
+      en: [
+        'Over 12 years in industrial policy and business support measures. Worked at QazIndustry, shaping Kazakhstan\'s industrial policy and guiding companies through state support programmes. Led entrepreneurship and industrial-innovation development departments in Almaty Region and Zhetysu Region.',
+      ],
+      kz: [
+        '12 жылдан астам өнеркәсіптік саясат және мемлекеттік бизнесті қолдау шаралары саласындағы тәжірибе. ҚазӨнеркәсіп ұйымында жұмыс істеп, ҚР өнеркәсіптік саясатын қалыптастырды және мемлекеттік қолдау шараларын алуда сүйемелдеу жүргізді. Алматы облысы мен Жетісу облысындағы кәсіпкерлік және индустриялық-инновациялық даму басқармаларына басшылық етті.',
+      ],
+      zh: [
+        '在工业政策及企业国家支持措施领域拥有逾12年经验。曾在QazIndustry工作，参与制定哈萨克斯坦工业政策并指导企业获取国家支持措施。曾领导阿拉木图州及哲提苏州的创业与工业创新发展管理部门。',
+      ]
+    }
+  }
+};
+
+/* ══ Modal logic ══ */
+let currentMember = null;
+
+function openModal(id) {
+  const data = teamData[id];
+  if (!data) return;
+  currentMember = id;
+
+  const lang = (typeof currentLang !== 'undefined' ? currentLang : 'ru');
+
+  // Photo
+  const photoEl = document.getElementById('modalPhoto');
+  photoEl.innerHTML = '';
+  const img = new Image();
+  img.alt = '';
+  img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
+  img.onerror = function() {
+    photoEl.innerHTML = '<div class="team-modal-avatar"><span>' + data.initials + '</span></div>';
+  };
+  img.src = data.photo;
+  photoEl.appendChild(img);
+
+  // Name & role from card (already translated)
+  const card = document.querySelector('[onclick="openModal(\'' + id + '\')"]');
+  document.getElementById('modalName').textContent = card ? card.querySelector('h3').textContent : '';
+  document.getElementById('modalRole').textContent = card ? card.querySelector('.role').textContent : '';
+
+  // Bio
+  const bio = (data.bio[lang] || data.bio.ru);
+  document.getElementById('modalBio').innerHTML = bio.map(p => '<p>' + p + '</p>').join('');
+
+  document.getElementById('teamModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('teamModal').classList.remove('open');
+  document.body.style.overflow = '';
+  currentMember = null;
+}
+
+function closeModalOnOverlay(e) {
+  if (e.target === document.getElementById('teamModal')) closeModal();
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+// Refresh modal bio on lang change
+document.addEventListener('langChanged', function(e) {
+  if (!currentMember) return;
+  const data = teamData[currentMember];
+  const lang = e.detail;
+  const bio = (data.bio[lang] || data.bio.ru);
+  document.getElementById('modalBio').innerHTML = bio.map(p => '<p>' + p + '</p>').join('');
+  const card = document.querySelector('[onclick="openModal(\'' + currentMember + '\')"]');
+  if (card) {
+    document.getElementById('modalName').textContent = card.querySelector('h3').textContent;
+    document.getElementById('modalRole').textContent = card.querySelector('.role').textContent;
+  }
+});
+</script>
+</body>
+</html>
