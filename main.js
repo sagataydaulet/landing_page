@@ -1,7 +1,7 @@
 // ── Active nav link by current page ──
 (function () {
-  const file = window.location.pathname.split('/').pop() || 'index.html';
-  const map = { 'index.html': 'nl-home', 'services.html': 'nl-services', 'team.html': 'nl-team', 'contacts.html': 'nl-contacts' };
+  const file = window.location.pathname.split('/').pop() || '/';
+  const map = { '/': 'nl-home', '/services': 'nl-services', '/team': 'nl-team', '/contacts': 'nl-contacts' };
   const el = document.getElementById(map[file]);
   if (el) el.classList.add('active');
 })();
