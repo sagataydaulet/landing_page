@@ -10,14 +10,14 @@
 <body>
 <!-- ══ NAV ══ -->
 <nav>
-  <a class="nav-logo-wrap" href="index.html">
+  <a class="nav-logo-wrap" href="/">
     <div class="nav-logo-icon"><img src="assets/Logo.png" alt="BIC"></div>
     <div class="nav-logo-text"><span>Bridge</span><span>Invest</span><span>Capital</span></div>
   </a>
   <ul class="nav-links">
-    <li><a id="nl-home"     href="index.html"    data-i18n="nav.home">Главная</a></li>
-    <li><a id="nl-services" href="services.html" data-i18n="nav.services">Услуги</a></li>
-    <li><a id="nl-team"     href="team.html"     data-i18n="nav.team">Наша команда</a></li>
+    <li><a id="nl-home"     href="/"    data-i18n="nav.home">Главная</a></li>
+    <li><a id="nl-services" href="/services" data-i18n="nav.services">Услуги</a></li>
+    <li><a id="nl-team"     href="/team"     data-i18n="nav.team">Наша команда</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-dropdown" id="langDropdown">
@@ -32,18 +32,18 @@
         <button class="lang-option" data-lang="zh" onclick="setLang('zh')"><span class="lang-flag">&#x1F1E8;&#x1F1F3;</span><span class="lang-name">中文</span><span class="lang-code">ZH</span></button>
       </div>
     </div>
-    <a class="nav-cta" href="contacts.html" data-i18n="nav.cta">Обсудить проект</a>
+    <a class="nav-cta" href="/contacts" data-i18n="nav.cta">Обсудить проект</a>
     <button class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <!-- ══ MOBILE MENU ══ -->
 <div class="mobile-menu" id="mMenu">
-  <a href="index.html"    onclick="toggleMenu()" data-i18n="nav.home">Главная</a>
-  <a href="services.html" onclick="toggleMenu()" data-i18n="nav.services">Услуги</a>
-  <a href="team.html"     onclick="toggleMenu()" data-i18n="nav.team">Наша команда</a>
-  <a href="contacts.html" onclick="toggleMenu()" data-i18n="nav.cta">Обсудить проект</a>
-  <a href="contacts.html" class="mob-cta" onclick="toggleMenu()" data-i18n="nav.cta">Обсудить проект</a>
+  <a href="/"    onclick="toggleMenu()" data-i18n="nav.home">Главная</a>
+  <a href="/services" onclick="toggleMenu()" data-i18n="nav.services">Услуги</a>
+  <a href="/team"     onclick="toggleMenu()" data-i18n="nav.team">Наша команда</a>
+  <a href="/contacts" onclick="toggleMenu()" data-i18n="nav.cta">Обсудить проект</a>
+  <a href="/contacts" class="mob-cta" onclick="toggleMenu()" data-i18n="nav.cta">Обсудить проект</a>
   <div class="mob-lang">
     <button class="mob-lang-btn" data-lang="ru" onclick="setLang('ru');toggleMenu()">&#x1F1F7;&#x1F1FA; RU</button>
     <button class="mob-lang-btn" data-lang="en" onclick="setLang('en');toggleMenu()">&#x1F1EC;&#x1F1E7; EN</button>
@@ -65,8 +65,8 @@
         <span data-i18n="home.hero.desc"> — профессиональный инвестиционный оператор. Мы сопровождаем проект от первоначальной идеи до работающего бизнеса — преодолевая административные, регуляторные и институциональные барьеры на каждом этапе.</span>
       </p>
       <div class="hero-btns">
-        <a class="btn-gold" href="contacts.html" data-i18n="home.hero.btn.discuss">Обсудить проект</a>
-        <a class="btn-dark" href="services.html" data-i18n="home.hero.btn.services">Наши услуги</a>
+        <a class="btn-gold" href="/contacts" data-i18n="home.hero.btn.discuss">Обсудить проект</a>
+        <a class="btn-dark" href="/services" data-i18n="home.hero.btn.services">Наши услуги</a>
       </div>
     </div>
   </div>
@@ -97,22 +97,22 @@
       <h2 data-i18n="home.approach.h2">Комплексное сопровождение на каждом этапе</h2>
     </div>
     <div class="cards-grid">
-      <a class="service-card reveal" href="services.html">
+      <a class="service-card reveal" href="/services">
         <div class="card-num">01</div>
         <h4 data-i18n="home.card1.title">Комплексное сопровождение</h4>
         <p data-i18n="home.card1.text">Закрываем весь цикл проекта: от оценки идеи до операционного запуска и постинвестиционного мониторинга. Один партнёр на всех этапах.</p>
       </a>
-      <a class="service-card reveal" href="services.html">
+      <a class="service-card reveal" href="/services">
         <div class="card-num">02</div>
         <h4 data-i18n="home.card2.title">Региональная экспертиза</h4>
         <p data-i18n="home.card2.text">Глубокое понимание казахстанской деловой среды, регуляторики и местной специфики — в каждом регионе страны.</p>
       </a>
-      <a class="service-card reveal" href="services.html">
+      <a class="service-card reveal" href="/services">
         <div class="card-num">03</div>
         <h4 data-i18n="home.card3.title">GR-сопровождение</h4>
         <p data-i18n="home.card3.text">Эффективное взаимодействие с государственными органами, содействие в получении преференций, лицензий и участии в госпрограммах.</p>
       </a>
-      <a class="service-card reveal" href="services.html">
+      <a class="service-card reveal" href="/services">
         <div class="card-num">04</div>
         <h4 data-i18n="home.card4.title">Защита интересов инвестора</h4>
         <p data-i18n="home.card4.text">Сопровождение на постинвестиционном этапе: контроль обязательств, регуляторные риски, текущие институциональные вопросы.</p>
@@ -126,7 +126,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <a class="footer-logo-wrap" href="index.html">
+        <a class="footer-logo-wrap" href="/">
           <div class="footer-logo-icon"><img src="assets/Logo.png" alt="BIC"></div>
           <div class="footer-logo-text"><span>Bridge</span><span>Invest</span><span>Capital</span></div>
         </a>
@@ -135,9 +135,9 @@
         <div class="footer-nav">
           <div class="footer-col-label" data-i18n="footer.nav.label">Навигация</div>
           <ul>
-            <li><a href="index.html"    data-i18n="nav.home">Главная</a></li>
-            <li><a href="services.html" data-i18n="nav.services">Услуги</a></li>
-            <li><a href="team.html"     data-i18n="nav.team">Наша команда</a></li>
+            <li><a href="/"    data-i18n="nav.home">Главная</a></li>
+            <li><a href="/services" data-i18n="nav.services">Услуги</a></li>
+            <li><a href="/team"     data-i18n="nav.team">Наша команда</a></li>
           </ul>
         </div>
         <div class="footer-contact">
