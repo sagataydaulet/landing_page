@@ -1,6 +1,6 @@
 // ── Active nav link by current page ──
 (function () {
-  const file = window.location.pathname.split('/').pop() || '/';
+  const file = window.location.pathname.split('/').pop() || 'index.html';
   const map = { '/': 'nl-home', '/services': 'nl-services', '/team': 'nl-team', '/contacts': 'nl-contacts' };
   const el = document.getElementById(map[file]);
   if (el) el.classList.add('active');
