@@ -68,12 +68,12 @@
 
       <div class="team-card reveal" onclick="openModal('m1')">
         <div class="team-photo">
-          <img src="/assets/Aidarov.png" alt="Айдаров Алмас"
+          <img src="/assets/Aidarov.jpeg" alt="Айдаров Алмас"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <span class="avatar-initials" style="display:none;">АА</span>
         </div>
         <div class="team-info">
-          <h3 data-i18n="team.m1.name">Айдаров Алмас</h3>
+          <h3 data-i18n="team.m1.name">Алмас Айдаров</h3>
           <div class="team-divider"></div>
           <div class="role" data-i18n="team.m1.role">Председатель наблюдательного совета</div>
           <div class="team-hint">
@@ -85,12 +85,12 @@
 
       <div class="team-card reveal" onclick="openModal('m2')">
         <div class="team-photo">
-          <img src="/assets/Sagatay.png" alt="Сагатай Даулет"
+          <img src="/assets/Sagatay.jpeg" alt="Сагатай Даулет"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <span class="avatar-initials" style="display:none;">СД</span>
         </div>
         <div class="team-info">
-          <h3 data-i18n="team.m2.name">Сагатай Даулет</h3>
+          <h3 data-i18n="team.m2.name">Даулет Сагатай</h3>
           <div class="team-divider"></div>
           <div class="role" data-i18n="team.m2.role">Генеральный директор</div>
           <div class="team-hint">
@@ -102,12 +102,12 @@
 
       <div class="team-card reveal" onclick="openModal('m3')">
         <div class="team-photo">
-          <img src="/assets/Spandiyar.png" alt="Спандияр Нурсултан"
+          <img src="/assets/Spandiyar.jpeg" alt="Спандияр Нурсултан"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <span class="avatar-initials" style="display:none;">СН</span>
         </div>
         <div class="team-info">
-          <h3 data-i18n="team.m3.name">Спандияр Нурсултан</h3>
+          <h3 data-i18n="team.m3.name">Нурсултан Спандияр</h3>
           <div class="team-divider"></div>
           <div class="role" data-i18n="team.m3.role">Директор по развитию бизнеса</div>
           <div class="team-hint">
@@ -119,14 +119,14 @@
 
       <div class="team-card reveal" onclick="openModal('m4')">
         <div class="team-photo">
-          <img src="/assets/Serikov.png" alt="Сериков Диас"
+          <img src="/assets/Serikov.jpeg" alt="Сериков Диас"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <span class="avatar-initials" style="display:none;">СД</span>
         </div>
         <div class="team-info">
-          <h3 data-i18n="team.m4.name">Сериков Диас</h3>
+          <h3 data-i18n="team.m4.name">Диас Сериков</h3>
           <div class="team-divider"></div>
-          <div class="role" data-i18n="team.m4.role">Директор по связи с государством</div>
+          <div class="role" data-i18n="team.m4.role">Директор по стратегии и стратегическим проектам</div>
           <div class="team-hint">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             <span data-i18n="team.hint">Подробнее</span>
@@ -198,7 +198,7 @@
 ══════════════════════════════════════════════════════ */
 const teamData = {
   m1: {
-    photo: 'assets/Aidarov.png', initials: 'АА',
+    photo: '/assets/Aidarov.jpeg', initials: 'АА',
     bio: {
       ru: [
         'Более 20 лет опыта в государственном управлении и инвестиционной сфере.',
@@ -231,7 +231,7 @@ const teamData = {
     }
   },
   m2: {
-    photo: 'assets/Sagatay.png', initials: 'СД',
+    photo: '/assets/Sagatay.jpeg', initials: 'СД',
     bio: {
       ru: [
         'Более 10 лет в области инвестиций и стратегического консалтинга. Структурировал и закрыл инвестиционные сделки на сумму $100+ млн в различных секторах экономики.',
@@ -258,7 +258,7 @@ const teamData = {
     }
   },
   m3: {
-    photo: 'assets/Spandiyar.png', initials: 'СН',
+    photo: '/assets/Spandiyar.jpeg', initials: 'СН',
     bio: {
       ru: [
         'Более 10 лет опыта в государственных структурах.',
@@ -291,7 +291,7 @@ const teamData = {
     }
   },
   m4: {
-    photo: 'assets/Serikov.png', initials: 'СД',
+    photo: '/assets/Serikov.jpeg', initials: 'СД',
     bio: {
       ru: [
         'Более 12 лет опыта в сфере промышленной политики и мер государственной поддержки бизнеса.',
@@ -340,7 +340,7 @@ function openModal(id) {
   photoEl.innerHTML = '';
   const img = new Image();
   img.alt = '';
-  img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
+  img.style.cssText = 'width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;';
   img.onerror = function() {
     photoEl.innerHTML = '<div class="team-modal-avatar"><span>' + data.initials + '</span></div>';
   };
