@@ -767,7 +767,7 @@ footer { background: var(--nav-bg); padding: 70px var(--pad-x) 36px; }
   .team-modal-header { padding: 22px 22px 18px; }
   .team-modal-name { font-size: 1.4rem; }
   .team-modal-body { padding: 22px; }
-  .team-modal-body p { font-size: 0.98rem; line-height: 1.8; }
+  .team-modal-body p { font-size: 0.9rem; line-height: 1.8; }
 
   .footer-top   { flex-direction: column; gap: 36px; }
   .footer-right { flex-direction: column; gap: 32px; }
