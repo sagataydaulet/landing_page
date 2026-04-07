@@ -452,12 +452,13 @@ footer { background: var(--nav-bg); padding: 70px var(--pad-x) 36px; }
 .step-content h3 {
   font-size: clamp(1.3rem, 2vw, 2.5rem); font-weight: 500;
   color: var(--gold-accent); margin-bottom: 12px; margin-top: 4px;
+  max-width: 900px;
 }
 .step-sub {
   font-size: 1.1rem; font-weight: 400; line-height: 1.75;
-  color: var(--text-light); margin-bottom: 28px; max-width: 800px;
+  color: var(--text-light); margin-bottom: 28px; max-width: 900px;
 }
-.step-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.step-list { list-style: none; display: flex; flex-direction: column; gap: 10px;}
 .step-list li {
   font-size: 0.9rem; font-weight: 400; line-height: 1.6;
   color: rgba(240,235,224,0.8); padding-left: 28px; position: relative;
