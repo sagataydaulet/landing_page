@@ -471,7 +471,7 @@ footer { background: var(--nav-bg); padding: 70px var(--pad-x) 36px; }
 
 /* ══ 13. TEAM + MODAL ══════════════════════════════════════ */
 
-.team-body { padding: 60px var(--pad-x) 100px; background: var(--bg); }
+.team-body { padding: 0px var(--pad-x) 100px; background: var(--bg); }
 .team-inner { max-width: var(--max-w); margin: 0 auto; }
 .team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
 
